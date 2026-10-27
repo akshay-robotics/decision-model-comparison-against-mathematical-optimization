@@ -1,0 +1,14 @@
+{
+  "source": "Actual browser canvas capture using MediaRecorder; re-encoded without changing the scene sequence.",
+  "duration_seconds": 41.96,
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "codec": "H.264",
+  "pixel_format": "yuv420p",
+  "audio": false,
+  "size_bytes": 1814372,
+  "sha256": "5e080009277bd22d39badfac563dcac309349a0de05ae772155a66e6f84795e2",
+  "full_decode_verified": true,
+  "encoder": "imageio-ffmpeg 0.6.0"
+}

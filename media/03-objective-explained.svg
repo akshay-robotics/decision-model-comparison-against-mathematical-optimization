@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T15:23:49.847136</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648
+L 1152 648
+L 1152 0
+L 0 0
+z
+" style="fill: #f5f3ed"/>
+  </g>
+  <g id="patch_2">
+   <path d="M 74.88 422.496
+L 368.64 422.496
+Q 382.464 422.496 382.464 414.72
+L 382.464 194.4
+Q 382.464 186.624 368.64 186.624
+L 74.88 186.624
+Q 61.056 186.624 61.056 194.4
+L 61.056 414.72
+Q 61.056 422.496 74.88 422.496
+z
+" style="fill: #ffffff; stroke: #dbe3d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_3">
+   <path d="M 432 422.496
+L 720 422.496
+Q 733.824 422.496 733.824 414.72
+L 733.824 194.4
+Q 733.824 186.624 720 186.624
+L 432 186.624
+Q 418.176 186.624 418.176 194.4
+L 418.176 414.72
+Q 418.176 422.496 432 422.496
+z
+" style="fill: #ffffff; stroke: #dbe3d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_4">
+   <path d="M 783.36 422.496
+L 1077.12 422.496
+Q 1090.944 422.496 1090.944 414.72
+L 1090.944 194.4
+Q 1090.944 186.624 1077.12 186.624
+L 783.36 186.624
+Q 769.536 186.624 769.536 194.4
+L 769.536 414.72
+Q 769.536 422.496 783.36 422.496
+z
+" style="fill: #ffffff; stroke: #dbe3d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="text_1">
+   <text style="fill: #34735b; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="63.36" y="42.12" transform="rotate(-0 63.36 42.12)">TRAFFIC DECISION LAB  /  EARLY EXPERIMENT</text>
+  </g>
+  <g id="text_2">
+   <text style="fill: #18332e; font: 700 33px 'DejaVu Sans'; text-anchor: start" x="63.36" y="93.96" transform="rotate(-0 63.36 93.96)">Give unfinished queues a cost.</text>
+  </g>
+  <g id="text_3">
+   <text style="fill: #60756b; font: 16px 'DejaVu Sans'; text-anchor: start" x="63.36" y="128.304" transform="rotate(-0 63.36 128.304)">One additional term. The same revised question for every model.</text>
+  </g>
+  <g id="text_4">
+   <text style="fill: #34735b; font: 700 20px 'DejaVu Sans'; text-anchor: start" x="95.616" y="236.52" transform="rotate(-0 95.616 236.52)">Accumulated queues</text>
+  </g>
+  <g id="text_5">
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(95.616 285.077344)">Add NS + EW queues</text>
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(95.616 309.92643)">after each second.</text>
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(95.616 334.775516)">Includes the final step.</text>
+  </g>
+  <g id="text_6">
+   <text style="fill: #34735b; font: 700 20px 'DejaVu Sans'; text-anchor: start" x="452.736" y="236.52" transform="rotate(-0 452.736 236.52)">Switching cost</text>
+  </g>
+  <g id="text_7">
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(452.736 285.077344)">0.5 × initiated switches</text>
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(452.736 309.92643)">Safety timings remain</text>
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(452.736 334.775516)">the same.</text>
+  </g>
+  <g id="text_8">
+   <text style="fill: #cc674b; font: 700 20px 'DejaVu Sans'; text-anchor: start" x="804.096" y="236.52" transform="rotate(-0 804.096 236.52)">Final-queue cost</text>
+  </g>
+  <g id="text_9">
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(804.096 285.077344)">10 × cars still queued</text>
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(804.096 309.92643)">at the planning boundary.</text>
+   <text style="fill: #18332e; font: 17px 'DejaVu Sans'" transform="translate(804.096 334.775516)">Added once.</text>
+  </g>
+  <g id="text_10">
+   <text style="fill: #18332e; font: 34px 'DejaVu Sans'; text-anchor: start" x="380.16" y="330.48" transform="rotate(-0 380.16 330.48)">+</text>
+  </g>
+  <g id="text_11">
+   <text style="fill: #18332e; font: 34px 'DejaVu Sans'; text-anchor: start" x="731.52" y="330.48" transform="rotate(-0 731.52 330.48)">+</text>
+  </g>
+  <g id="text_12">
+   <text style="fill: #18332e; font: 700 26px 'DejaVu Sans'; text-anchor: start" x="74.88" y="492.48" transform="rotate(-0 74.88 492.48)">J = Σ(q_NS + q_EW) + 0.5 × switches + 10 × final queue</text>
+  </g>
+  <g id="text_13">
+   <text style="fill: #cc674b; font: 18px 'DejaVu Sans'; text-anchor: start" x="74.88" y="550.8" transform="rotate(-0 74.88 550.8)">Example: 3 cars left in the modeled final queue → +30 cost units.</text>
+  </g>
+  <g id="text_14">
+   <text style="fill: #60756b; font: 13px 'DejaVu Sans'; text-anchor: start" x="74.88" y="599.4" transform="rotate(-0 74.88 599.4)">Weight 10 was fixed before the rerun. A modeled queue penalty is not a direct count of completed SUMO trips.</text>
+  </g>
+ </g>
+</svg>

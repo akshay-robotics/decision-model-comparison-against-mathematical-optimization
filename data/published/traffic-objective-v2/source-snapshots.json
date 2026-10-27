@@ -1,0 +1,17 @@
+{
+  "original-remote": {
+    "archive": "source-original-remote.zip",
+    "sha256": "c617c307240a6c80086d760b74aa476d673cb61e6d00886bae30c3855d088e14",
+    "core_source_sha256": "9b7261036f90744b0ccd0f3a47b77a94cabd147cb140aee4b2278d3a4a322bd7"
+  },
+  "original-gurobi": {
+    "archive": "source-original-gurobi.zip",
+    "sha256": "192cea179b7338c6bbb3cc2a62e8a2d928d0577b1dfad107cca81025c66b33fc",
+    "core_source_sha256": "51067bc8aabb213e4057afab2c39ccb7d85081a66bed4d9e5fc9b42cf5899f7a"
+  },
+  "terminal": {
+    "archive": "source-terminal.zip",
+    "sha256": "c2c700ba64224e68f252a64e86e6734e607e7ecbfe005a6f99d2530ff29b10e8",
+    "core_source_sha256": "1ab82df079fe38db93e841cafdd3a36704efca5533b3ada79fdea81d0a6ee9f2"
+  }
+}

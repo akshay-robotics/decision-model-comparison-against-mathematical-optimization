@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:04,000
+Can decision models make useful traffic-signal choices compared with an optimizer?
+
+2
+00:00:04,000 --> 00:00:14,000
+Five saved SUMO replays share one clock. The same 78-car demand is used for every controller.
+
+3
+00:00:14,000 --> 00:00:24,000
+Counters show completion, remaining demand, and time in system. Remaining includes future scheduled cars.
+
+4
+00:00:24,000 --> 00:00:34,000
+The revised objective adds 10 times the final modeled queue. Planning horizon: 15 seconds.
+
+5
+00:00:34,000 --> 00:00:41,960
+Changing the objective changed controller behavior, but did not improve every controller. One seed; early results.

@@ -1,0 +1,31 @@
+name: Repository checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check repository files and documentation links
+        run: python3 scripts/check_repository.py
+      - name: Check publication for credentials and private artifacts
+        run: python3 scripts/check_publication_security.py
+      - name: Validate published data and release assets
+        run: python3 scripts/validate_release.py
+      - name: Install hardened XML parser for offline unit checks
+        run: python3 -m pip install defusedxml==0.7.1
+      - name: Test controller and scoring contracts
+        run: python3 -m unittest discover -s tests -v
+      - name: Check committed whitespace
+        run: git show --format= --check HEAD

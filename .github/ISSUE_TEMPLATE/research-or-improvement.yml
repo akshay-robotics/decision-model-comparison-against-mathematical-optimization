@@ -1,0 +1,20 @@
+name: Research question or improvement
+description: Propose a comparison, report a problem, or improve the project.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or research question
+      description: Describe what should be investigated or changed and why.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Include relevant methods, assumptions, or reproduction steps.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and acceptance criteria
+      description: Link sources and explain how the outcome can be checked.

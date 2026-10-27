@@ -1,0 +1,660 @@
+{
+  "original": {
+    "examples": {
+      "jev": {
+        "model": "typesafe/jev-1.13",
+        "questions": {
+          "signal": {
+            "criteria": {
+              "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+              "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+            },
+            "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+            "type": "choice"
+          }
+        },
+        "state": {
+          "arrivals_forecast_NS_EW": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "clearance_remaining_seconds": 0.0,
+          "current_phase": "NS",
+          "legal_actions": [
+            "NS",
+            "EW"
+          ],
+          "min_green_seconds": 5.0,
+          "pending_phase": null,
+          "phase_elapsed_seconds": 4.999999999999998,
+          "planning_horizon_seconds": 15,
+          "queue_totals": {
+            "EW": 0,
+            "NS": 0
+          },
+          "simulation_time_seconds": 5.0,
+          "switch_clearance_seconds": 5.0,
+          "yellow_seconds": 3.0
+        }
+      },
+      "luna": {
+        "model": "openai/gpt-6-luna-decisions",
+        "questions": {
+          "signal": {
+            "criteria": {
+              "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+              "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+            },
+            "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+            "type": "choice"
+          }
+        },
+        "state": {
+          "arrivals_forecast_NS_EW": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "clearance_remaining_seconds": 0.0,
+          "current_phase": "NS",
+          "legal_actions": [
+            "NS",
+            "EW"
+          ],
+          "min_green_seconds": 5.0,
+          "pending_phase": null,
+          "phase_elapsed_seconds": 4.999999999999998,
+          "planning_horizon_seconds": 15,
+          "queue_totals": {
+            "EW": 0,
+            "NS": 0
+          },
+          "simulation_time_seconds": 5.0,
+          "switch_clearance_seconds": 5.0,
+          "yellow_seconds": 3.0
+        }
+      },
+      "microsoft": {
+        "model": "microsoft/microsoft-decision-1",
+        "questions": {
+          "signal": {
+            "criteria": {
+              "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+              "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+            },
+            "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+            "type": "choice"
+          }
+        },
+        "state": {
+          "arrivals_forecast_NS_EW": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "clearance_remaining_seconds": 0.0,
+          "current_phase": "NS",
+          "legal_actions": [
+            "NS",
+            "EW"
+          ],
+          "min_green_seconds": 5.0,
+          "pending_phase": null,
+          "phase_elapsed_seconds": 4.999999999999998,
+          "planning_horizon_seconds": 15,
+          "queue_totals": {
+            "EW": 0,
+            "NS": 0
+          },
+          "simulation_time_seconds": 5.0,
+          "switch_clearance_seconds": 5.0,
+          "yellow_seconds": 3.0
+        }
+      },
+      "sol-medium": {
+        "max_completion_tokens": 4096,
+        "messages": [
+          {
+            "content": "{\"questions\":{\"signal\":{\"criteria\":{\"EW\":\"Keep EW green now, or request EW and start clearance now if NS is green.\",\"NS\":\"Keep NS green now, or request NS and start clearance now if EW is green.\"},\"instructions\":\"Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.\",\"type\":\"choice\"}},\"state\":{\"arrivals_forecast_NS_EW\":[[0,0],[0,0],[0,1],[0,1],[2,0],[1,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"clearance_remaining_seconds\":0.0,\"current_phase\":\"NS\",\"legal_actions\":[\"NS\",\"EW\"],\"min_green_seconds\":5.0,\"pending_phase\":null,\"phase_elapsed_seconds\":4.999999999999998,\"planning_horizon_seconds\":15,\"queue_totals\":{\"EW\":0,\"NS\":0},\"simulation_time_seconds\":5.0,\"switch_clearance_seconds\":5.0,\"yellow_seconds\":3.0}}",
+            "role": "user"
+          }
+        ],
+        "model": "openai/gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "response_format": {
+          "json_schema": {
+            "name": "signal_choice",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "choice": {
+                  "enum": [
+                    "NS",
+                    "EW"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "choice"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          },
+          "type": "json_schema"
+        }
+      }
+    },
+    "question": {
+      "criteria": {
+        "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+        "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+      },
+      "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+      "type": "choice"
+    },
+    "version": "matched-queue-v7-configurable-horizon"
+  },
+  "terminal": {
+    "examples": {
+      "jev": {
+        "model": "typesafe/jev-1.13",
+        "questions": {
+          "signal": {
+            "criteria": {
+              "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+              "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+            },
+            "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Also add 10.0 times the sum of NS and EW queues at the end of step 15. Thus J = sum(q_NS[t]+q_EW[t], t=1..15) + 0.5*switch_count + 10.0*(q_NS[15]+q_EW[15]). The final queue is included in the running sum and additionally in the terminal penalty. This penalizes residual modeled queues; queue discharge is not the same as completing a SUMO trip. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+            "type": "choice"
+          }
+        },
+        "state": {
+          "arrivals_forecast_NS_EW": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "clearance_remaining_seconds": 0.0,
+          "current_phase": "NS",
+          "legal_actions": [
+            "NS",
+            "EW"
+          ],
+          "min_green_seconds": 5.0,
+          "pending_phase": null,
+          "phase_elapsed_seconds": 4.999999999999998,
+          "planning_horizon_seconds": 15,
+          "queue_totals": {
+            "EW": 0,
+            "NS": 0
+          },
+          "simulation_time_seconds": 5.0,
+          "switch_clearance_seconds": 5.0,
+          "yellow_seconds": 3.0
+        }
+      },
+      "luna": {
+        "model": "openai/gpt-6-luna-decisions",
+        "questions": {
+          "signal": {
+            "criteria": {
+              "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+              "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+            },
+            "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Also add 10.0 times the sum of NS and EW queues at the end of step 15. Thus J = sum(q_NS[t]+q_EW[t], t=1..15) + 0.5*switch_count + 10.0*(q_NS[15]+q_EW[15]). The final queue is included in the running sum and additionally in the terminal penalty. This penalizes residual modeled queues; queue discharge is not the same as completing a SUMO trip. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+            "type": "choice"
+          }
+        },
+        "state": {
+          "arrivals_forecast_NS_EW": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "clearance_remaining_seconds": 0.0,
+          "current_phase": "NS",
+          "legal_actions": [
+            "NS",
+            "EW"
+          ],
+          "min_green_seconds": 5.0,
+          "pending_phase": null,
+          "phase_elapsed_seconds": 4.999999999999998,
+          "planning_horizon_seconds": 15,
+          "queue_totals": {
+            "EW": 0,
+            "NS": 0
+          },
+          "simulation_time_seconds": 5.0,
+          "switch_clearance_seconds": 5.0,
+          "yellow_seconds": 3.0
+        }
+      },
+      "microsoft": {
+        "model": "microsoft/microsoft-decision-1",
+        "questions": {
+          "signal": {
+            "criteria": {
+              "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+              "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+            },
+            "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Also add 10.0 times the sum of NS and EW queues at the end of step 15. Thus J = sum(q_NS[t]+q_EW[t], t=1..15) + 0.5*switch_count + 10.0*(q_NS[15]+q_EW[15]). The final queue is included in the running sum and additionally in the terminal penalty. This penalizes residual modeled queues; queue discharge is not the same as completing a SUMO trip. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+            "type": "choice"
+          }
+        },
+        "state": {
+          "arrivals_forecast_NS_EW": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "clearance_remaining_seconds": 0.0,
+          "current_phase": "NS",
+          "legal_actions": [
+            "NS",
+            "EW"
+          ],
+          "min_green_seconds": 5.0,
+          "pending_phase": null,
+          "phase_elapsed_seconds": 4.999999999999998,
+          "planning_horizon_seconds": 15,
+          "queue_totals": {
+            "EW": 0,
+            "NS": 0
+          },
+          "simulation_time_seconds": 5.0,
+          "switch_clearance_seconds": 5.0,
+          "yellow_seconds": 3.0
+        }
+      },
+      "sol-medium": {
+        "max_completion_tokens": 4096,
+        "messages": [
+          {
+            "content": "{\"questions\":{\"signal\":{\"criteria\":{\"EW\":\"Keep EW green now, or request EW and start clearance now if NS is green.\",\"NS\":\"Keep NS green now, or request NS and start clearance now if EW is green.\"},\"instructions\":\"Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Also add 10.0 times the sum of NS and EW queues at the end of step 15. Thus J = sum(q_NS[t]+q_EW[t], t=1..15) + 0.5*switch_count + 10.0*(q_NS[15]+q_EW[15]). The final queue is included in the running sum and additionally in the terminal penalty. This penalizes residual modeled queues; queue discharge is not the same as completing a SUMO trip. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.\",\"type\":\"choice\"}},\"state\":{\"arrivals_forecast_NS_EW\":[[0,0],[0,0],[0,1],[0,1],[2,0],[1,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"clearance_remaining_seconds\":0.0,\"current_phase\":\"NS\",\"legal_actions\":[\"NS\",\"EW\"],\"min_green_seconds\":5.0,\"pending_phase\":null,\"phase_elapsed_seconds\":4.999999999999998,\"planning_horizon_seconds\":15,\"queue_totals\":{\"EW\":0,\"NS\":0},\"simulation_time_seconds\":5.0,\"switch_clearance_seconds\":5.0,\"yellow_seconds\":3.0}}",
+            "role": "user"
+          }
+        ],
+        "model": "openai/gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "response_format": {
+          "json_schema": {
+            "name": "signal_choice",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "choice": {
+                  "enum": [
+                    "NS",
+                    "EW"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "choice"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          },
+          "type": "json_schema"
+        }
+      }
+    },
+    "question": {
+      "criteria": {
+        "EW": "Keep EW green now, or request EW and start clearance now if NS is green.",
+        "NS": "Keep NS green now, or request NS and start clearance now if EW is green."
+      },
+      "instructions": "Choose the first action of a 15-step plan with one-second steps. Compare BOTH legal first actions: keep current_phase green for step 1, or initiate a switch to the other phase immediately at the start of step 1. For each first action, consider its best legal continuation through step 15 and compare objective J = sum of end-of-step NS and EW queues over steps 1 through 15 plus 0.5 for each phase switch initiated within the horizon. Also add 10.0 times the sum of NS and EW queues at the end of step 15. Thus J = sum(q_NS[t]+q_EW[t], t=1..15) + 0.5*switch_count + 10.0*(q_NS[15]+q_EW[15]). The final queue is included in the running sum and additionally in the terminal penalty. This penalizes residual modeled queues; queue discharge is not the same as completing a SUMO trip. Initialize queues from queue_totals. Forecast row t in arrivals_forecast_NS_EW is [NS, EW] arrivals during step t, starting at t=0. In every step add that row's arrivals, then serve the minimum of available queue and capacity: when a group stays green, capacity is 2.0 vehicles for that group; during yellow, capacity is 1.0 for the outgoing group; during all-red, capacity is zero. The red group always serves zero. End-of-step queue = prior queue + arrivals - service. A switch makes the outgoing phase yellow immediately for ceil(yellow_seconds) steps, then both groups all-red for ceil(switch_clearance_seconds - yellow_seconds) steps; only then does the requested phase become green. A newly green phase must remain green for ceil(min_green_seconds) steps before another switch. Use current_phase, phase_elapsed_seconds, pending_phase, clearance_remaining_seconds, and legal_actions to enforce the current state and legal transitions. Use only the supplied forecast; do not invent future demand or choose a phase merely because its current queue is larger. Choose the switch only if its best J is strictly lower than the best J from staying. If the objectives tie, keep current_phase. Return only a legal action.",
+      "type": "choice"
+    },
+    "version": "matched-queue-v8-terminal-queue"
+  }
+}

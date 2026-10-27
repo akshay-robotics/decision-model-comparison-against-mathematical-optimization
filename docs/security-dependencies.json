@@ -1,0 +1,148 @@
+{
+  "checked_date": "2026-10-26",
+  "database": "OSV",
+  "database_url": "https://osv.dev/",
+  "scope": "Isolated Python 3.12 review environment, including optional media/solver and review tools. Not a native-binary audit.",
+  "packages": [
+    {
+      "name": "bandit",
+      "version": "1.9.4",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "eclipse-sumo",
+      "version": "1.28.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "fonttools",
+      "version": "4.67.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "gurobipy",
+      "version": "12.0.3",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "version": "0.6.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.9.4",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "pip",
+      "version": "26.2.2",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "stevedore",
+      "version": "5.9.1",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "sumo-data",
+      "version": "1.28.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "sumolib",
+      "version": "1.28.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "traci",
+      "version": "1.28.0",
+      "active_advisory_ids": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "active_advisory_ids": []
+    }
+  ]
+}

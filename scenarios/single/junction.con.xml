@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+    <connection from="n_in" to="s_out" fromLane="0" toLane="0"/>
+    <connection from="s_in" to="n_out" fromLane="0" toLane="0"/>
+    <connection from="e_in" to="w_out" fromLane="0" toLane="0"/>
+    <connection from="w_in" to="e_out" fromLane="0" toLane="0"/>
+</connections>

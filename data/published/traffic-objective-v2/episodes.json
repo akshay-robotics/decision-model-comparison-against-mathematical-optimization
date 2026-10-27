@@ -1,0 +1,780 @@
+[
+  {
+    "active": 14,
+    "api_calls": 0,
+    "by_approach": {
+      "E": {
+        "completed": 18,
+        "generated": 20,
+        "unfinished": 2
+      },
+      "N": {
+        "completed": 18,
+        "generated": 24,
+        "unfinished": 6
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 16,
+        "generated": 20,
+        "unfinished": 4
+      }
+    },
+    "completed": 64,
+    "completion_percent": 82.051,
+    "condition": "original",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "gurobi",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 0,
+    "mean_choice_ms": 8.681,
+    "mean_completed_travel_seconds": 30.802,
+    "mean_completed_wait_seconds": 4.909,
+    "mean_system_seconds": 28.274,
+    "objective": {
+      "green_capacity": 2,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 0,
+      "version": "end-step-queues-plus-switches-v1",
+      "yellow_capacity": 1
+    },
+    "output_tokens": 0,
+    "p95_choice_ms": 14.126,
+    "planning_horizon": 15,
+    "prompt_sha256": null,
+    "prompt_version": null,
+    "providers": [],
+    "reported_api_cost_usd": 0,
+    "requested_model": null,
+    "returned_models": [],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {
+      "forced": 77,
+      "optimal": 43
+    },
+    "switches": 9,
+    "total_system_seconds": 2205.365,
+    "unfinished": 14,
+    "worst_solver_gap": 0.0
+  },
+  {
+    "active": 24,
+    "api_calls": 17,
+    "by_approach": {
+      "E": {
+        "completed": 14,
+        "generated": 20,
+        "unfinished": 6
+      },
+      "N": {
+        "completed": 14,
+        "generated": 24,
+        "unfinished": 10
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 14,
+        "generated": 20,
+        "unfinished": 6
+      }
+    },
+    "completed": 54,
+    "completion_percent": 69.231,
+    "condition": "original",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "microsoft",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 9687,
+    "mean_choice_ms": 406.634,
+    "mean_completed_travel_seconds": 38.548,
+    "mean_completed_wait_seconds": 8.446,
+    "mean_system_seconds": 34.851,
+    "objective": {
+      "green_capacity": 2,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 0,
+      "version": "end-step-queues-plus-switches-v1",
+      "yellow_capacity": 1
+    },
+    "output_tokens": 17,
+    "p95_choice_ms": 1149.763,
+    "planning_horizon": 15,
+    "prompt_sha256": "81865b69a115bacd8078b7e9e5d6da086da85a537be61430da63e69913768370",
+    "prompt_version": "matched-queue-v7-configurable-horizon",
+    "providers": [
+      "Azure"
+    ],
+    "reported_api_cost_usd": 0.000406854,
+    "requested_model": "microsoft/microsoft-decision-1",
+    "returned_models": [
+      "microsoft/microsoft-decision-1-20261009"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 11,
+    "total_system_seconds": 2718.365,
+    "unfinished": 24,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 12,
+    "api_calls": 70,
+    "by_approach": {
+      "E": {
+        "completed": 19,
+        "generated": 20,
+        "unfinished": 1
+      },
+      "N": {
+        "completed": 18,
+        "generated": 24,
+        "unfinished": 6
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 17,
+        "generated": 20,
+        "unfinished": 3
+      }
+    },
+    "completed": 66,
+    "completion_percent": 84.615,
+    "condition": "original",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "jev",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 64688,
+    "mean_choice_ms": 283.054,
+    "mean_completed_travel_seconds": 26.438,
+    "mean_completed_wait_seconds": 4.011,
+    "mean_system_seconds": 24.666,
+    "objective": {
+      "green_capacity": 2,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 0,
+      "version": "end-step-queues-plus-switches-v1",
+      "yellow_capacity": 1
+    },
+    "output_tokens": 2170,
+    "p95_choice_ms": 343.662,
+    "planning_horizon": 15,
+    "prompt_sha256": "81865b69a115bacd8078b7e9e5d6da086da85a537be61430da63e69913768370",
+    "prompt_version": "matched-queue-v7-configurable-horizon",
+    "providers": [
+      "TypeSafe"
+    ],
+    "reported_api_cost_usd": 0.002716896,
+    "requested_model": "typesafe/jev-1.13",
+    "returned_models": [
+      "typesafe/jev-1.13-20260917"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 5,
+    "total_system_seconds": 1923.965,
+    "unfinished": 12,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 23,
+    "api_calls": 106,
+    "by_approach": {
+      "E": {
+        "completed": 19,
+        "generated": 20,
+        "unfinished": 1
+      },
+      "N": {
+        "completed": 10,
+        "generated": 24,
+        "unfinished": 14
+      },
+      "S": {
+        "completed": 8,
+        "generated": 14,
+        "unfinished": 6
+      },
+      "W": {
+        "completed": 17,
+        "generated": 20,
+        "unfinished": 3
+      }
+    },
+    "completed": 54,
+    "completion_percent": 69.231,
+    "condition": "original",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "luna",
+    "entry_backlog": 1,
+    "generated": 78,
+    "input_tokens": 67510,
+    "mean_choice_ms": 449.585,
+    "mean_completed_travel_seconds": 29.087,
+    "mean_completed_wait_seconds": 7.7,
+    "mean_system_seconds": 30.307,
+    "objective": {
+      "green_capacity": 2,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 0,
+      "version": "end-step-queues-plus-switches-v1",
+      "yellow_capacity": 1
+    },
+    "output_tokens": 0,
+    "p95_choice_ms": 775.588,
+    "planning_horizon": 15,
+    "prompt_sha256": "81865b69a115bacd8078b7e9e5d6da086da85a537be61430da63e69913768370",
+    "prompt_version": "matched-queue-v7-configurable-horizon",
+    "providers": [
+      "OpenAI"
+    ],
+    "reported_api_cost_usd": 0.006751,
+    "requested_model": "openai/gpt-6-luna-decisions",
+    "returned_models": [
+      "openai/gpt-6-luna-decisions-20261006"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 1,
+    "total_system_seconds": 2363.965,
+    "unfinished": 24,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 14,
+    "api_calls": 43,
+    "by_approach": {
+      "E": {
+        "completed": 18,
+        "generated": 20,
+        "unfinished": 2
+      },
+      "N": {
+        "completed": 18,
+        "generated": 24,
+        "unfinished": 6
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 16,
+        "generated": 20,
+        "unfinished": 4
+      }
+    },
+    "completed": 64,
+    "completion_percent": 82.051,
+    "condition": "original",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "sol-medium",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 25843,
+    "mean_choice_ms": 14388.872,
+    "mean_completed_travel_seconds": 30.802,
+    "mean_completed_wait_seconds": 4.909,
+    "mean_system_seconds": 28.274,
+    "objective": {
+      "green_capacity": 2,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 0,
+      "version": "end-step-queues-plus-switches-v1",
+      "yellow_capacity": 1
+    },
+    "output_tokens": 24405,
+    "p95_choice_ms": 20238.867,
+    "planning_horizon": 15,
+    "prompt_sha256": "81865b69a115bacd8078b7e9e5d6da086da85a537be61430da63e69913768370",
+    "prompt_version": "matched-queue-v7-configurable-horizon",
+    "providers": [
+      "OpenAI"
+    ],
+    "reported_api_cost_usd": 0.295736,
+    "requested_model": "openai/gpt-6.1-sol",
+    "returned_models": [
+      "openai/gpt-6.1-sol"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 9,
+    "total_system_seconds": 2205.365,
+    "unfinished": 14,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 13,
+    "api_calls": 0,
+    "by_approach": {
+      "E": {
+        "completed": 18,
+        "generated": 20,
+        "unfinished": 2
+      },
+      "N": {
+        "completed": 18,
+        "generated": 24,
+        "unfinished": 6
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 17,
+        "generated": 20,
+        "unfinished": 3
+      }
+    },
+    "completed": 65,
+    "completion_percent": 83.333,
+    "condition": "terminal",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "gurobi",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 0,
+    "mean_choice_ms": 6.572,
+    "mean_completed_travel_seconds": 29.566,
+    "mean_completed_wait_seconds": 4.58,
+    "mean_system_seconds": 27.212,
+    "objective": {
+      "green_capacity": 2.0,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 10.0,
+      "version": "end-step-queues-plus-terminal-v2",
+      "yellow_capacity": 1.0
+    },
+    "output_tokens": 0,
+    "p95_choice_ms": 11.297,
+    "planning_horizon": 15,
+    "prompt_sha256": null,
+    "prompt_version": null,
+    "providers": [],
+    "reported_api_cost_usd": 0,
+    "requested_model": null,
+    "returned_models": [],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {
+      "forced": 77,
+      "optimal": 43
+    },
+    "switches": 9,
+    "total_system_seconds": 2122.565,
+    "unfinished": 13,
+    "worst_solver_gap": 0.0
+  },
+  {
+    "active": 25,
+    "api_calls": 18,
+    "by_approach": {
+      "E": {
+        "completed": 14,
+        "generated": 20,
+        "unfinished": 6
+      },
+      "N": {
+        "completed": 14,
+        "generated": 24,
+        "unfinished": 10
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 13,
+        "generated": 20,
+        "unfinished": 7
+      }
+    },
+    "completed": 53,
+    "completion_percent": 67.949,
+    "condition": "terminal",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "microsoft",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 12203,
+    "mean_choice_ms": 353.729,
+    "mean_completed_travel_seconds": 39.272,
+    "mean_completed_wait_seconds": 8.74,
+    "mean_system_seconds": 35.346,
+    "objective": {
+      "green_capacity": 2.0,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 10.0,
+      "version": "end-step-queues-plus-terminal-v2",
+      "yellow_capacity": 1.0
+    },
+    "output_tokens": 18,
+    "p95_choice_ms": 456.735,
+    "planning_horizon": 15,
+    "prompt_sha256": "38436de20be11aed76a6c0837bf036ed45ba0223a639cdfcdad659ab4948bc1c",
+    "prompt_version": "matched-queue-v8-terminal-queue",
+    "providers": [
+      "Azure"
+    ],
+    "reported_api_cost_usd": 0.000512526,
+    "requested_model": "microsoft/microsoft-decision-1",
+    "returned_models": [
+      "microsoft/microsoft-decision-1-20261009"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 11,
+    "total_system_seconds": 2756.965,
+    "unfinished": 25,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 18,
+    "api_calls": 70,
+    "by_approach": {
+      "E": {
+        "completed": 17,
+        "generated": 20,
+        "unfinished": 3
+      },
+      "N": {
+        "completed": 15,
+        "generated": 24,
+        "unfinished": 9
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 16,
+        "generated": 20,
+        "unfinished": 4
+      }
+    },
+    "completed": 60,
+    "completion_percent": 76.923,
+    "condition": "terminal",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "jev",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 72460,
+    "mean_choice_ms": 264.48,
+    "mean_completed_travel_seconds": 30.54,
+    "mean_completed_wait_seconds": 6.832,
+    "mean_system_seconds": 28.375,
+    "objective": {
+      "green_capacity": 2.0,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 10.0,
+      "version": "end-step-queues-plus-terminal-v2",
+      "yellow_capacity": 1.0
+    },
+    "output_tokens": 2170,
+    "p95_choice_ms": 367.044,
+    "planning_horizon": 15,
+    "prompt_sha256": "38436de20be11aed76a6c0837bf036ed45ba0223a639cdfcdad659ab4948bc1c",
+    "prompt_version": "matched-queue-v8-terminal-queue",
+    "providers": [
+      "TypeSafe"
+    ],
+    "reported_api_cost_usd": 0.00304332,
+    "requested_model": "typesafe/jev-1.13",
+    "returned_models": [
+      "typesafe/jev-1.13-20260917"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 5,
+    "total_system_seconds": 2213.265,
+    "unfinished": 18,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 20,
+    "api_calls": 88,
+    "by_approach": {
+      "E": {
+        "completed": 16,
+        "generated": 20,
+        "unfinished": 4
+      },
+      "N": {
+        "completed": 18,
+        "generated": 24,
+        "unfinished": 6
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 12,
+        "generated": 20,
+        "unfinished": 8
+      }
+    },
+    "completed": 58,
+    "completion_percent": 74.359,
+    "condition": "terminal",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "luna",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 65014,
+    "mean_choice_ms": 296.874,
+    "mean_completed_travel_seconds": 32.84,
+    "mean_completed_wait_seconds": 9.891,
+    "mean_system_seconds": 30.398,
+    "objective": {
+      "green_capacity": 2.0,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 10.0,
+      "version": "end-step-queues-plus-terminal-v2",
+      "yellow_capacity": 1.0
+    },
+    "output_tokens": 0,
+    "p95_choice_ms": 394.472,
+    "planning_horizon": 15,
+    "prompt_sha256": "38436de20be11aed76a6c0837bf036ed45ba0223a639cdfcdad659ab4948bc1c",
+    "prompt_version": "matched-queue-v8-terminal-queue",
+    "providers": [
+      "OpenAI"
+    ],
+    "reported_api_cost_usd": 0.0065014,
+    "requested_model": "openai/gpt-6-luna-decisions",
+    "returned_models": [
+      "openai/gpt-6-luna-decisions-20261006"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 3,
+    "total_system_seconds": 2371.065,
+    "unfinished": 20,
+    "worst_solver_gap": null
+  },
+  {
+    "active": 13,
+    "api_calls": 43,
+    "by_approach": {
+      "E": {
+        "completed": 18,
+        "generated": 20,
+        "unfinished": 2
+      },
+      "N": {
+        "completed": 18,
+        "generated": 24,
+        "unfinished": 6
+      },
+      "S": {
+        "completed": 12,
+        "generated": 14,
+        "unfinished": 2
+      },
+      "W": {
+        "completed": 17,
+        "generated": 20,
+        "unfinished": 3
+      }
+    },
+    "completed": 65,
+    "completion_percent": 83.333,
+    "condition": "terminal",
+    "config": {
+      "all_red": 2.0,
+      "cav_share": 0.5,
+      "decision_interval": 1.0,
+      "dt": 0.1,
+      "duration": 120,
+      "inflow_per_approach": 0.15,
+      "min_green": 5.0,
+      "planning_horizon": 15,
+      "seed": 7,
+      "yellow": 3.0
+    },
+    "controller": "sol-medium",
+    "entry_backlog": 0,
+    "generated": 78,
+    "input_tokens": 30229,
+    "mean_choice_ms": 16487.963,
+    "mean_completed_travel_seconds": 29.566,
+    "mean_completed_wait_seconds": 4.58,
+    "mean_system_seconds": 27.212,
+    "objective": {
+      "green_capacity": 2.0,
+      "step_seconds": 1,
+      "switch_penalty": 0.5,
+      "terminal_queue_penalty": 10.0,
+      "version": "end-step-queues-plus-terminal-v2",
+      "yellow_capacity": 1.0
+    },
+    "output_tokens": 26638,
+    "p95_choice_ms": 27920.608,
+    "planning_horizon": 15,
+    "prompt_sha256": "38436de20be11aed76a6c0837bf036ed45ba0223a639cdfcdad659ab4948bc1c",
+    "prompt_version": "matched-queue-v8-terminal-queue",
+    "providers": [
+      "OpenAI"
+    ],
+    "reported_api_cost_usd": 0.326838,
+    "requested_model": "openai/gpt-6.1-sol",
+    "returned_models": [
+      "openai/gpt-6.1-sol"
+    ],
+    "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+    "seed": 7,
+    "simulation_duration": 120,
+    "solver_status_counts": {},
+    "switches": 9,
+    "total_system_seconds": 2122.565,
+    "unfinished": 13,
+    "worst_solver_gap": null
+  }
+]

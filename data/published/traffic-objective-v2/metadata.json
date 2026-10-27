@@ -1,0 +1,212 @@
+{
+  "completed_time_semantics": "Travel and waiting means include completed trips only.",
+  "conditions": {
+    "original": {
+      "manifest": {
+        "controllers": [
+          "gurobi",
+          "microsoft",
+          "jev",
+          "luna",
+          "sol-medium"
+        ],
+        "created_utc": "2026-10-21T21:25:14.069069+00:00",
+        "duration_seconds": 120,
+        "gurobi_reference_version": "queue-switch-events-v2",
+        "gurobi_time_limit_seconds": 0.8,
+        "horizons": [
+          15,
+          30,
+          60,
+          120
+        ],
+        "protocol": "matched-queue-v7-configurable-horizon",
+        "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+        "seed": 7,
+        "source_runs": [
+          {
+            "controller": "gurobi",
+            "horizon": 15,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-gurobi-v2-2026-10-21/h15/seed7/gurobi"
+          },
+          {
+            "controller": "microsoft",
+            "horizon": 15,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h15/seed7/microsoft"
+          },
+          {
+            "controller": "jev",
+            "horizon": 15,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h15/seed7/jev"
+          },
+          {
+            "controller": "luna",
+            "horizon": 15,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h15/seed7/luna"
+          },
+          {
+            "controller": "sol-medium",
+            "horizon": 15,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h15/seed7/sol-medium"
+          },
+          {
+            "controller": "gurobi",
+            "horizon": 30,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-gurobi-v2-2026-10-21/h30/seed7/gurobi"
+          },
+          {
+            "controller": "microsoft",
+            "horizon": 30,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h30/seed7/microsoft"
+          },
+          {
+            "controller": "jev",
+            "horizon": 30,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h30/seed7/jev"
+          },
+          {
+            "controller": "luna",
+            "horizon": 30,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h30/seed7/luna"
+          },
+          {
+            "controller": "sol-medium",
+            "horizon": 30,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h30/seed7/sol-medium"
+          },
+          {
+            "controller": "gurobi",
+            "horizon": 60,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-gurobi-v2-2026-10-21/h60/seed7/gurobi"
+          },
+          {
+            "controller": "microsoft",
+            "horizon": 60,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h60/seed7/microsoft"
+          },
+          {
+            "controller": "jev",
+            "horizon": 60,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h60/seed7/jev"
+          },
+          {
+            "controller": "luna",
+            "horizon": 60,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h60/seed7/luna"
+          },
+          {
+            "controller": "sol-medium",
+            "horizon": 60,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h60/seed7/sol-medium"
+          },
+          {
+            "controller": "gurobi",
+            "horizon": 120,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-gurobi-v2-2026-10-21/h120/seed7/gurobi"
+          },
+          {
+            "controller": "microsoft",
+            "horizon": 120,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h120/seed7/microsoft"
+          },
+          {
+            "controller": "jev",
+            "horizon": 120,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h120/seed7/jev"
+          },
+          {
+            "controller": "luna",
+            "horizon": 120,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h120/seed7/luna"
+          },
+          {
+            "controller": "sol-medium",
+            "horizon": 120,
+            "route_sha256": "4bec8a1bb6aec042bb99319e8df447ba10336ef8ea40090c745b05143886c505",
+            "source": "results/horizon-replays-2026-10-21/h120/seed7/sol-medium"
+          }
+        ]
+      },
+      "objective": {
+        "green_capacity": 2,
+        "step_seconds": 1,
+        "switch_penalty": 0.5,
+        "terminal_queue_penalty": 0,
+        "version": "end-step-queues-plus-switches-v1",
+        "yellow_capacity": 1
+      }
+    },
+    "terminal": {
+      "manifest": {
+        "controllers": [
+          "gurobi",
+          "microsoft",
+          "jev",
+          "luna",
+          "sol-medium"
+        ],
+        "duration": 120,
+        "horizons": [
+          15
+        ],
+        "objective": {
+          "green_capacity": 2.0,
+          "step_seconds": 1,
+          "switch_penalty": 0.5,
+          "terminal_queue_penalty": 10.0,
+          "version": "end-step-queues-plus-terminal-v2",
+          "yellow_capacity": 1.0
+        },
+        "protocol": "matched-queue-v8-terminal-queue",
+        "seed": 7,
+        "source_sha256": "1ab82df079fe38db93e841cafdd3a36704efca5533b3ada79fdea81d0a6ee9f2",
+        "workers": 4
+      },
+      "objective": {
+        "green_capacity": 2.0,
+        "step_seconds": 1,
+        "switch_penalty": 0.5,
+        "terminal_queue_penalty": 10.0,
+        "version": "end-step-queues-plus-terminal-v2",
+        "yellow_capacity": 1.0
+      }
+    }
+  },
+  "episodes_per_condition_per_controller": 1,
+  "experiment_date": "2026-10-21",
+  "gurobi_original_reference_version": "queue-switch-events-v2",
+  "gurobi_revised_reference_version": "queue-switch-events-v3-terminal",
+  "gurobi_seconds_per_choice": 0.8,
+  "gurobi_threads": 1,
+  "independent_traffic_seeds": 1,
+  "latency_semantics": "End-to-end legal-choice latency; SUMO pauses during model calls.",
+  "limits": [
+    "No revised-objective frozen optimization benchmark.",
+    "Model aliases and stochastic outputs can change.",
+    "No general long-horizon optimization conclusion.",
+    "Objective coefficient fixed before rerun."
+  ],
+  "scope": "single-junction development pilot",
+  "sol_max_completion_tokens": 4096,
+  "sol_reasoning_effort": "medium",
+  "system_time_semantics": "Every generated car, from scheduled departure until arrival or cutoff."
+}

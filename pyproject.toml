@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traffic-decision-lab"
+version = "0.1.0"
+description = "SUMO traffic signal control pilot for decision-model comparisons"
+requires-python = ">=3.11"
+dependencies = ["eclipse-sumo==1.28.0", "traci==1.28.0", "defusedxml==0.7.1"]
+
+[project.optional-dependencies]
+gurobi = ["gurobipy"]
+media = ["Pillow==13.0.0", "matplotlib==3.9.4", "imageio-ffmpeg==0.6.0"]
+
+[tool.setuptools.packages.find]
+include = ["trafficlab*"]
+
+[tool.setuptools.package-data]
+trafficlab = ["static/*.html", "static/*.js"]

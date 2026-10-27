@@ -1,0 +1,32 @@
+[
+  {
+    "post": 1,
+    "text": "1/5 Can decision models control traffic lights as well as an optimizer?\n\nI compared Microsoft, Jev, Luna and Sol with Gurobi in SUMO. A key lesson: a good average can hide unfinished cars.\n\nAn early planning-horizon experiment 🧵",
+    "utf16_length": 229,
+    "attachment": "media/demo.mp4"
+  },
+  {
+    "post": 2,
+    "text": "2/5 Same 78-car demand, seed and signal constraints. Same observation format, forecast construction and objective.\n\nEach controller chooses NS or EW. The featured run uses a 15-second planning horizon and 120 simulated seconds. States diverge after different choices.",
+    "utf16_length": 267,
+    "attachment": "media/01-experiment-overview.png"
+  },
+  {
+    "post": 3,
+    "text": "3/5 Completed-only travel time excludes cars that never finish.\n\nWe report completed/total, cars remaining, approach coverage and time in the system for ALL generated cars through the cutoff. Traffic outcomes and optimization quality are separate tests.",
+    "utf16_length": 253,
+    "attachment": null
+  },
+  {
+    "post": 4,
+    "text": "4/5 I changed one term:\n\nqueue cost + 0.5 × switches\n→ add 10 × the final modeled queue.\n\nThe same revised objective went to Gurobi and every model. The penalty values queues left at the planning boundary; it does not directly reward completed SUMO trips.",
+    "utf16_length": 255,
+    "attachment": "media/03-objective-explained.png"
+  },
+  {
+    "post": 5,
+    "text": "5/5 Completed/78: Gurobi 64→65, Sol 64→65, Jev 66→60, Microsoft 54→53, Luna 54→58.\n\nChanging the objective changed behavior, but did not improve every controller.\n\nOne seed; one run per condition. Next: more seeds, harder cases and a new frozen optimization benchmark.",
+    "utf16_length": 268,
+    "attachment": "media/02-before-after-results.png"
+  }
+]

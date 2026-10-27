@@ -1,0 +1,45 @@
+# Operating system and editor files
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.*
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Generated or local-only artifacts
+build/
+dist/
+tmp/
+output/
+outputs/
+data/raw/
+data/processed/
+results/
+*.log
+
+# Third-party reference paper: retain locally, link to the publisher in Git
+TR2023-059.pdf
+TR2024-123.pdf
