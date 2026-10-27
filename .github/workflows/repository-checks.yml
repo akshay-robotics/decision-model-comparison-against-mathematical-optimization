@@ -24,8 +24,10 @@ jobs:
       - name: Validate published data and release assets
         run: python3 scripts/validate_release.py
       - name: Install hardened XML parser for offline unit checks
-        run: python3 -m pip install defusedxml==0.7.1
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install defusedxml==0.7.1
       - name: Test controller and scoring contracts
-        run: python3 -m unittest discover -s tests -v
+        run: .venv/bin/python -m unittest discover -s tests -v
       - name: Check committed whitespace
         run: git show --format= --check HEAD

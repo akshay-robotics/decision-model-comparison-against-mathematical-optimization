@@ -11,7 +11,7 @@
 ## Before the first public push
 
 1. Review the prepared MIT license, README, small published dataset, media, and marketing copy.
-2. Selected destination: owner `akshay-robotics`, repository `decision-model-comparison`, public visibility. Account authentication and the first push must be verified before treating it as published.
+2. Selected destination: owner `akshay-robotics`, repository `decision-model-comparison-against-mathematical-optimization`, public visibility. Account authentication and the first push must be verified before treating it as published.
 3. Configure your Git author identity if it is not already set. Use your preferred public or GitHub-provided private email.
 4. Run the checks below and review every staged file. The automated checks are limited and are not a full secret scanner.
 5. Create the initial commit and an empty GitHub repository, then connect the remote and push `main`.

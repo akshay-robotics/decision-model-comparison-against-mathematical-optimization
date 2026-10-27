@@ -1,4 +1,4 @@
-# Traffic Decision Lab
+# Decision Model Comparison Against Mathematical Optimization
 
 An early experiment in decision-making over a planning horizon: can decision
 models make useful traffic-signal choices compared with a mathematical optimizer?

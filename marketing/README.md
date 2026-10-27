@@ -44,7 +44,7 @@ duration and small file size fit the standard limits documented in
 ## GitHub publication
 
 The selected public repository is
-[`akshay-robotics/decision-model-comparison`](https://github.com/akshay-robotics/decision-model-comparison).
+[`akshay-robotics/decision-model-comparison-against-mathematical-optimization`](https://github.com/akshay-robotics/decision-model-comparison-against-mathematical-optimization).
 Use that URL when sharing the work and recheck post length. The same MP4 and PNG files
 can be uploaded as GitHub release assets. A GitHub attachment URL can be used
 for native inline video playback in the README after upload; its current
